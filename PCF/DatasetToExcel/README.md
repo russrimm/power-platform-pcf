@@ -19,23 +19,29 @@ with customizable button to match your app style.
 ## Import the component to your tenant
 
 Here is how to add the component to your microsoft dynamic 365:
-- Before start using the component, you need to enable the Code Component in your environment if it is not enabled.
-- from github repo releases, download the latest released solution.
-- in you microsoft account navigate to powerapps, then solutions and select import solution, then continue importing the solution that you have downloaded from github.
-- if solution imported successfully, open the app that you want to use the component in it, then select Insert menu form the left side bar, then in yhe bottom of the side bar, select **_Get more components_**, this will open a dialog in the right side, the dialog has 2 tabs, **_canvas_** and **_code_**, select code tab, then find DatasetToExcel component and import it.
+- Before importing this component, insure that you have enabled need to enable the [PowerApps Component Framework feature](https://learn.microsoft.com/en-us/power-apps/developer/component-framework/component-framework-for-canvas-apps) in the environment you will be importing this control to.
+- From github repo releases, download the latest released solution.
+- While logged in with your Microsoft Work or School account, navigate to [Power Apps](https://make.powerapps.com):
+- 
+-     1. Click **Solutions**
+-     2. Select **Import Solution**
+-     3. Selected the solution that you have downloaded from GitHub.
+- 
+- Once the solution has been successfully imported, open or create the PowerApp that you would like to utilize the DatasetToExcel custom PCF component.
+- Select **Insert menu form** the left side bar, then in yhe bottom of the side bar, select **_Get more components_**, this will open a dialog in the right side, the dialog has 2 tabs, **_canvas_** and **_code_**, select code tab, then find DatasetToExcel component and import it.
 
 
 ## Usage
 
 ### [Download Zip](https://github.com/ChrisMcKee1/power-platform-pcf/raw/main/PCF/DatasetToExcel/ExcelExporter.zip)
 
-1. Insert the data collection to "Items" property
-2. Insert a collection that contain at least one Column example name is ColName with the rows being the column names of the DataSet you wish to export.
+1. Insert the collection containing your data to be exported to "Items" property of the ExportDataToExcel component.
+2. Insert a collection/table that contains one or more columns headers in your dataset.  Example name is ColName with the rows being the column names of the DataSet you wish to export.
 3. Map ColName to the Column Property.
 4. Under Properties Select Fields then select all the columns
 5. Optional - Update the FileName property.
 6. Next you should download Excel file containing the data in collection
 
-- You can change the apearance of button by changing the component properties for color, icon text color, etc..
+- You can change the apearance of the export button by changing the component properties for color, icon text color, etc..
 
-[Hussam Odat](https://www.linkedin.com/in/hussam-odat-5075aa73) code was used to get started, I built on top of this code to add the custom SelectedColumns Functionality.
+Thanks to [Hussam Odat](https://www.linkedin.com/in/hussam-odat-5075aa73) who created the original componet code.  I needed the added functionality of being able to select which columns to export (SelectedColumns) and this is the resulting PCF.  I hope you benefit from it as much as I have.
